@@ -1,0 +1,49 @@
+name: História de usuário
+description: Funcionalidade ou melhoria com valor para o escritório
+title: "[História] "
+labels: ["tipo:funcionalidade"]
+body:
+  - type: markdown
+    attributes:
+      value: "Não use dados reais de clientes ou processos. Use exemplos fictícios."
+  - type: textarea
+    id: objetivo
+    attributes:
+      label: Objetivo
+      description: "Como [usuário], quero [necessidade], para [benefício]."
+      placeholder: "Como advogado, quero..., para..."
+    validations:
+      required: true
+  - type: textarea
+    id: contexto
+    attributes:
+      label: Contexto
+      description: Por que isso importa agora? De onde veio a demanda (piloto, PO, risco)?
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Critérios de aceitação
+      description: "Dado... Quando... Então..."
+      placeholder: |
+        - Dado ...
+          Quando ...
+          Então ...
+    validations:
+      required: true
+  - type: textarea
+    id: restricoes
+    attributes:
+      label: Observações, restrições e dependências
+      description: Regras de negócio, LGPD, dependências de outros itens, riscos.
+  - type: checkboxes
+    id: dod
+    attributes:
+      label: Definition of Done aplicável
+      options:
+        - label: Critérios de aceitação atendidos
+        - label: Testes automatizados verdes (obrigatórios em Prazos, Financeiro e isolamento)
+        - label: Revisão por outra pessoa no PR
+        - label: Checagem de isolamento entre escritórios e de dados pessoais
+        - label: Deploy em homologação conferido

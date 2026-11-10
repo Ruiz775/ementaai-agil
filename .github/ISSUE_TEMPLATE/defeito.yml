@@ -1,0 +1,52 @@
+name: Defeito
+description: Algo que não funciona como deveria
+title: "[Defeito] "
+labels: ["tipo:defeito"]
+body:
+  - type: markdown
+    attributes:
+      value: "Não cole dados reais de clientes, processos ou prints com dados pessoais. Descreva com dados fictícios."
+  - type: textarea
+    id: comportamento
+    attributes:
+      label: O que acontece
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que deveria acontecer
+    validations:
+      required: true
+  - type: textarea
+    id: passos
+    attributes:
+      label: Como reproduzir
+      placeholder: |
+        1. ...
+        2. ...
+    validations:
+      required: true
+  - type: dropdown
+    id: impacto
+    attributes:
+      label: Impacto
+      description: "Crítico = prazo processual errado, dado de um escritório visível para outro, ou sistema fora do ar. Só crítico pode ir para a raia Urgente, e quem decide é o PO."
+      options:
+        - Crítico
+        - Alto
+        - Médio
+        - Baixo
+    validations:
+      required: true
+  - type: input
+    id: origem
+    attributes:
+      label: Origem
+      description: Quem reportou (escritório-piloto anonimizado, time, monitoramento)
+  - type: checkboxes
+    id: regressao
+    attributes:
+      label: Correção
+      options:
+        - label: A correção inclui teste de regressão
